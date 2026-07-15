@@ -717,20 +717,15 @@ var editIdx = null;
 function fmt(s){if(!s)return'';return new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'2-digit'});}
 function daysBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000);}
 function autoProgress(t){
-  if(t.status!=='pending'||t.progress!==0)return{progress:t.progress,status:t.status};
+  if(t.status==='done'||t.status==='delayed')return{progress:t.progress,status:t.status};
   var today=new Date();today.setHours(0,0,0,0);
   var s=new Date(t.start+'T00:00:00');s.setHours(0,0,0,0);
   var e=new Date(t.end+'T00:00:00');e.setHours(0,0,0,0);
   if(e<today)return{progress:100,status:'done'};
   if(s<=today){var el=Math.round((today-s)/86400000);var sp=Math.max(1,Math.round((e-s)/86400000));return{progress:Math.min(99,Math.round(el/sp*100)),status:'wip'};}
-  return{progress:0,status:'pending'};
+  return{progress:t.progress,status:t.status};
 }
-function isDelayed(t){
-  if(t.status==='done')return false;
-  var today=new Date();today.setHours(0,0,0,0);
-  var e=new Date(t.end+'T00:00:00');e.setHours(0,0,0,0);
-  return e<today;
-}
+function isDelayed(t){return t.status==='delayed';}
 
 function showIndex(){
   document.getElementById('index-view').style.display='';
