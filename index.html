@@ -15,7 +15,8 @@ body{font-family:'Lato',sans-serif;background:var(--off-white);color:var(--black
 
 
 
-.nav-strip{background:var(--white);border-bottom:2px solid var(--charcoal);padding:0 20px;display:flex;align-items:center;}
+.nav-strip{background:var(--white);border-bottom:2px solid var(--charcoal);padding:0 20px;display:flex;align-items:center;position:sticky;top:0;z-index:60;}
+.sched-project{position:sticky;top:51px;z-index:55;background:var(--accent-bg);border-bottom:1px solid var(--accent-lt);padding:10px 20px;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--charcoal);letter-spacing:.5px;}
 .nav-item{padding:14px 0;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--black);border-bottom:2px solid var(--charcoal);margin-bottom:-2px;font-family:'Playfair Display',serif;}
 .back-btn{margin-left:auto;padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text-muted);font-family:'Lato',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border-radius:2px;display:none;}
 .back-btn:hover{border-color:var(--charcoal);color:var(--charcoal);}
@@ -208,6 +209,7 @@ footer{text-align:center;padding:24px 20px;font-size:.62rem;letter-spacing:1px;t
 
 <!-- SCHEDULE VIEW -->
 <div id="schedule-view">
+  <div class="sched-project" id="sched-project"></div>
   <div class="disclaimer"><strong>NOTICE:</strong> Schedule dates are planning targets and may shift due to weather, inspections, material availability, client selections, change orders, and trade coordination. We update project schedules regularly to keep clients informed throughout construction.</div>
   <div class="info-bar" id="info-bar"></div>
   <div class="help-text">Tap any task to edit progress &amp; status</div>
@@ -220,6 +222,7 @@ var S2='Stage 2: Rough In Construction';
 var S3='Stage 3: Finish Construction';
 var S4='Stage 4: Punch List';
 
+var PROJECT_LABELS={'11231_Brookdale':'11231 Brookdale Dr','11247_Brookdale':'11247 Brookdale Dr','11263_Brookdale':'11263 Brookdale Dr','11279_Brookdale':'11279 Brookdale Dr','11295_Brookdale':'11295 Brookdale Dr','1380_SE_Menlo':'1380 SE Menlo','1390_SE_Menlo':'1390 SE Menlo','2622_SE_Steele':'2622 SE Steele','2626_SE_Steele':'2626 SE Steele','3539_NW_183rd':'3539 NW 183rd St'};
 var allProjects = {'11231_Brookdale': [
 
     {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'1',task:'Permit',start:'2026-04-08',end:'2026-04-22',progress:100,status:'done'},
@@ -816,6 +819,9 @@ function showIndex(){
 
 function showSchedule(key){
   currentKey=key;
+  var lbl=(typeof PROJECT_LABELS!=='undefined'&&PROJECT_LABELS[key])?PROJECT_LABELS[key]:key.replace(/_/g,' ');
+  document.getElementById('nav-item').textContent=lbl;
+  document.getElementById('sched-project').textContent=lbl;
   document.getElementById('index-view').style.display='none';
   document.getElementById('schedule-view').classList.add('active');
   document.getElementById('back-btn').classList.add('visible');
