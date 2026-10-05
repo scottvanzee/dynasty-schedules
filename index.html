@@ -125,7 +125,7 @@ footer{text-align:center;padding:24px 20px;font-size:.62rem;letter-spacing:1px;t
     <section class="community-section">
       <div class="community-header">
         <h2 class="community-name">Brookdale Drive</h2>
-        <span class="community-count">5 Homes</span>
+        <span class="community-count">4 Homes</span>
       </div>
       <div class="project-grid">
         <div class="project-card" onclick="showSchedule('11231_Brookdale')">
@@ -140,11 +140,6 @@ footer{text-align:center;padding:24px 20px;font-size:.62rem;letter-spacing:1px;t
         </div>
         <div class="project-card" onclick="showSchedule('11263_Brookdale')">
           <div class="project-info">            <span class="project-address">11263 Brookdale Dr</span>
-          </div>
-          <div class="project-arrow"><span class="arrow-label">View</span><span class="arrow-icon">&rarr;</span></div>
-        </div>
-        <div class="project-card" onclick="showSchedule('11279_Brookdale')">
-          <div class="project-info">            <span class="project-address">11279 Brookdale Dr</span>
           </div>
           <div class="project-arrow"><span class="arrow-label">View</span><span class="arrow-icon">&rarr;</span></div>
         </div>
@@ -222,7 +217,7 @@ var S2='Stage 2: Rough In Construction';
 var S3='Stage 3: Finish Construction';
 var S4='Stage 4: Punch List';
 
-var PROJECT_LABELS={'11231_Brookdale':'11231 Brookdale Dr','11247_Brookdale':'11247 Brookdale Dr','11263_Brookdale':'11263 Brookdale Dr','11279_Brookdale':'11279 Brookdale Dr','11295_Brookdale':'11295 Brookdale Dr','1380_SE_Menlo':'1380 SE Menlo','1390_SE_Menlo':'1390 SE Menlo','2622_SE_Steele':'2622 SE Steele','2626_SE_Steele':'2626 SE Steele','3539_NW_183rd':'3539 NW 183rd St'};
+var PROJECT_LABELS={'11231_Brookdale':'11231 Brookdale Dr','11247_Brookdale':'11247 Brookdale Dr','11263_Brookdale':'11263 Brookdale Dr','11295_Brookdale':'11295 Brookdale Dr','1380_SE_Menlo':'1380 SE Menlo','1390_SE_Menlo':'1390 SE Menlo','2622_SE_Steele':'2622 SE Steele','2626_SE_Steele':'2626 SE Steele','3539_NW_183rd':'3539 NW 183rd St'};
 var allProjects = {'11231_Brookdale': [
 
     {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'1',task:'Permit',start:'2026-04-08',end:'2026-04-22',progress:100,status:'done'},
@@ -389,62 +384,6 @@ var allProjects = {'11231_Brookdale': [
     {stage:'Stage 4: Punch List',num:'31',task:'Misc Punch Out',start:'2026-11-22',end:'2026-12-06',progress:0,status:'pending'},
     {stage:'Stage 4: Punch List',num:'32',task:'Touch Up Clean',start:'2026-12-06',end:'2026-12-07',progress:0,status:'pending'},
     {stage:'Stage 4: Punch List',num:'33',task:'Final Inspection',start:'2026-12-07',end:'2026-12-08',progress:0,status:'pending'}
-
-],
-'11279_Brookdale': [
-
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'1',task:'Permit',start:'2026-02-24',end:'2026-03-10',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'2',task:'Site Stake',start:'2026-02-24',end:'2026-03-01',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'2',task:'Temp Pole Install',start:'2026-02-24',end:'2026-02-26',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'3',task:'Excavation',start:'2026-03-10',end:'2026-03-13',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'4',task:'Footings and Foundation',start:'2026-03-13',end:'2026-03-17',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'5',task:'Plumbing Groundwork',start:'2026-03-17',end:'2026-03-24',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'6',task:'Backfill',start:'2026-03-24',end:'2026-03-25',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'7',task:'Garage and Basement Flatwork',start:'2026-03-25',end:'2026-03-27',progress:100,status:'done'},
-    {stage:'Stage 1: Site Prep, Excavation, Foundation and Plumbing',num:'8',task:'Gas Bracket Install',start:'2026-03-27',end:'2026-03-28',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'9',task:'Framing',start:'2026-06-08',end:'2026-07-07',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'10',task:'Roofing',start:'2026-07-07',end:'2026-07-08',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'11',task:'HVAC',start:'2026-07-09',end:'2026-07-28',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'11',task:'Plumbing',start:'2026-07-06',end:'2026-07-14',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'11',task:'Electrical',start:'2026-07-10',end:'2026-07-28',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'12',task:'Rough In Inspection',start:'2026-07-30',end:'2026-08-01',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'13',task:'Siding',start:'2026-08-01',end:'2026-08-17',progress:0,status:'pending'},
-    {stage:'Stage 2: Rough In Construction',num:'14',task:'Insulation',start:'2026-08-01',end:'2026-08-04',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'14',task:'Gas Flow Check / Meter Install',start:'2026-08-04',end:'2026-08-05',progress:0,status:'pending'},
-    {stage:'Stage 2: Rough In Construction',num:'15',task:'Insulation Inspection',start:'2026-08-05',end:'2026-08-07',progress:100,status:'done'},
-    {stage:'Stage 2: Rough In Construction',num:'16',task:'Drywall',start:'2026-08-17',end:'2026-09-10',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'17',task:'Exterior Paint',start:'2026-09-10',end:'2026-09-12',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'17',task:'Exterior Stone',start:'2026-09-10',end:'2026-09-12',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'17',task:'Interior Trimwork',start:'2026-09-10',end:'2026-10-02',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'18',task:'Exterior Concrete',start:'2026-09-12',end:'2026-09-21',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'20',task:'Paint Prep / Drywall Touch Up',start:'2026-10-02',end:'2026-10-03',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'20',task:'Interior Paint',start:'2026-10-03',end:'2026-10-13',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'22',task:'Cabinet Hardware',start:'2026-10-13',end:'2026-10-14',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'21',task:'Tile',start:'2026-10-14',end:'2026-10-26',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'22',task:'Countertops',start:'2026-10-26',end:'2026-10-27',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'23',task:'Electrical Trim',start:'2026-10-27',end:'2026-11-03',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'23',task:'Garage Door Openers',start:'2026-10-29',end:'2026-10-30',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'23',task:'HVAC Trim',start:'2026-10-27',end:'2026-10-29',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'23',task:'Interior Stone',start:'2026-10-27',end:'2026-10-29',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'24',task:'Hardwood and LVP Floors',start:'2026-11-03',end:'2026-11-07',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'24',task:'Appliances',start:'2026-11-07',end:'2026-11-08',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'25',task:'Carpet',start:'2026-11-08',end:'2026-11-12',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'26',task:'Plumbing Trim',start:'2026-11-12',end:'2026-11-14',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'26',task:'Closet Shelving Install',start:'2026-11-12',end:'2026-11-14',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'26',task:'Mirrors and Shower Doors',start:'2026-11-14',end:'2026-11-15',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'27',task:'Irrigation',start:'2026-11-14',end:'2026-11-15',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'27',task:'Landscaping',start:'2026-11-14',end:'2026-11-15',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'27',task:'Sod',start:'2026-11-14',end:'2026-11-15',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'27',task:'Garage Paint (if applicable)',start:'2026-11-15',end:'2026-11-16',progress:0,status:'pending'},
-    {stage:'Stage 3: Finish Construction',num:'27',task:'Garage Epoxy (if applicable)',start:'2026-11-16',end:'2026-11-17',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'28',task:'Door and Hardware Install',start:'2026-11-15',end:'2026-11-18',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'29',task:'Final Clean',start:'2026-11-18',end:'2026-11-20',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'29',task:'Window Cleaning',start:'2026-11-18',end:'2026-11-19',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'30',task:'Drywall Touch Up',start:'2026-11-20',end:'2026-11-21',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'30',task:'Paint Touch Up',start:'2026-11-20',end:'2026-11-21',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'31',task:'Misc Punch Out',start:'2026-11-21',end:'2026-12-05',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'32',task:'Touch Up Clean',start:'2026-12-05',end:'2026-12-06',progress:0,status:'pending'},
-    {stage:'Stage 4: Punch List',num:'33',task:'Final Inspection',start:'2026-12-06',end:'2026-12-07',progress:0,status:'pending'}
 
 ],
 '11295_Brookdale': [
